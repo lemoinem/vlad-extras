@@ -8,7 +8,6 @@
 #
 #   set :deploy_tasks, %w(
 #     vlad:update
-#     vlad:symlink
 #     vlad:start_app
 #     vlad:cleanup
 #   )
@@ -19,7 +18,6 @@ namespace :vlad do
 
   set :deploy_tasks, %w(
     vlad:update
-    vlad:symlink
     vlad:bundle:install
     vlad:migrate
     vlad:start_app
