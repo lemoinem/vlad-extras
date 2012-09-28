@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.description = "This gem provides extra recipes for Vlad the Deployer."
 
   s.add_runtime_dependency("vlad", ["~> 2.2.4"])
-  s.add_runtime_dependency("rake-remote_task", ["~> 2.1.1.alpha"])
+  s.add_runtime_dependency("rake-remote_task", ["~> 2.1.1"])
 
   s.files        = `git ls-files`.split("\n")
   s.executables  = `git ls-files`.split("\n").select{|f| f =~ /^bin/}
