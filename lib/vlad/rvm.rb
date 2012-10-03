@@ -18,6 +18,8 @@ namespace :vlad do
          'if [ -s "./.rvmrc" ] ; then source "./.rvmrc" ; fi'
         ]
 
+      set :sudo_cmd, "rvmsudo"
+
       desc 'Trust scm/repo'
       remote_task :scm_repo do
         puts '[RVM] Trust scm/repo'
