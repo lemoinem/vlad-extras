@@ -14,7 +14,8 @@ namespace :vlad do
 
       set :command_prefix, command_prefix + 
         [
-         'if [ -s "/etc/profile.d/rvm.sh" ] ; then source "/etc/profile.d/rvm.sh" ; elif [ -s "${HOME}/.rvmrc" ] ; then source "${HOME}/.rvmrc" ; fi',
+         'if [ -s "/etc/profile.d/rvm.sh" ] ; then source "/etc/profile.d/rvm.sh" ; fi',
+         'if [ -s "${HOME}/.rvmrc" ] ; then source "${HOME}/.rvmrc" ; fi',
          'if [ -s "./.rvmrc" ] ; then source "./.rvmrc" ; fi'
         ]
 
