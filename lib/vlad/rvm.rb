@@ -12,11 +12,8 @@ namespace :vlad do
 
     namespace :trust do
 
-      set :command_prefix, command_prefix + 
-        [
-         'if [ -s "/etc/profile.d/rvm.sh" ] ; then source "/etc/profile.d/rvm.sh" ; elif [ -s "${HOME}/.rvmrc" ] ; then source "${HOME}/.rvmrc" ; fi',
-         'if [ -s "./.rvmrc" ] ; then source "./.rvmrc" ; fi'
-        ]
+      append(:command_prefix), 'if [ -s "/etc/profile.d/rvm.sh" ] ; then source "/etc/profile.d/rvm.sh" ; elif [ -s "${HOME}/.rvmrc" ] ; then source "${HOME}/.rvmrc" ; fi'
+      append(:command_prefix), 'if [ -s "./.rvmrc" ] ; then source "./.rvmrc" ; fi'
 
       desc 'Trust scm/repo'
       remote_task :scm_repo do
